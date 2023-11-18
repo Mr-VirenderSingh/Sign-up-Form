@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(120deg, #696eff, #f8acff);
+  padding: 10px;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  background: linear-gradient(120deg, #696eff, #f8acff);
+}
+
+.container form .user-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form .user-details .input-box {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+  height: 50%;
+  width: 100%;
+  margin: 8px 0 8px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding-left: 10px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box .details {
+  font-size: 14px;
+  display: block;
+  font-weight: 500;
+  margin: 4px;
+}
+
+.button {
+  height: 38px;
+  margin: 18px 0px 0px 0;
+}
+
+.button  input {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 4px;
+  background: linear-gradient(120deg, #696eff, #f8acff);
+  transition: all 1s;
+}
+
+.button input:hover {
+  background: linear-gradient(-120deg, #696eff, #f8acff);
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+
+.logo img {
+  width: 55px;
+  padding-bottom: 25px;
+}
+
+@media (max-width: 550px) {
+  body{
+    height: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .container form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+};
